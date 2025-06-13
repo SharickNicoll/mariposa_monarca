@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 15</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #fffaf2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #ff9800;
+            color: white;
+            padding: 30px 20px;
+        }
+        section {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h1, h2 {
+            margin: 0.5em 0;
+        }
+        .frase {
+            font-style: italic;
+            font-size: 1.2em;
+            color: #e65100;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #ff9800;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            margin: 10px 5px;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #e65100;
+        }
+        .oculto {
+            display: none;
+        }
+        input[type="text"] {
+            padding: 8px;
+            font-size: 1em;
+            width: 70%;
+            max-width: 400px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .subseccion {
+            margin-top: 40px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 15px auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        ul {
+            text-align: left;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>La Maravilla de la Mariposa Monarca</h1>
+</header>
+
+<section>
+    <p class="frase">"Pequeña viajera del viento, su destino es prueba de la fuerza en lo delicado."</p>
+
+    <input type="text" id="busqueda" placeholder="Buscar sección (ej: hábitat, alimentación, migración)">
+    <br>
+    <button onclick="buscarSeccion()">Buscar</button>
+    <button onclick="mostrarTodo()">Mostrar todo</button>
+    <button onclick="mostrarOcultar()">Mostrar/Ocultar Información Científica</button>
+
+    <div id="infoCientifica" class="oculto">
+        
+        <div class="subseccion">
+            <h2>Información General</h2>
+            <p><strong>Nombre común:</strong> Mariposa Monarca</p>
+            <p><strong>Nombre científico:</strong> <em>Danaus plexippus</em></p>
+            <img src="mariposa-monarca.jpg" alt="Mariposa Monarca">
+        </div>
+
+        <div class="subseccion">
+            <h2>Clasificación Taxonómica</h2>
+            <ul>
+                <li><strong>Reino:</strong> Animalia</li>
+                <li><strong>Filo:</strong> Arthropoda</li>
+                <li><strong>Clase:</strong> Insecta</li>
+                <li><strong>Orden:</strong> Lepidoptera</li>
+                <li><strong>Familia:</strong> Nymphalidae</li>
+                <li><strong>Subfamilia:</strong> Danainae</li>
+            </ul>
+        </div>
+
+        <div class="subseccion">
+            <h2>Morfología y Fisiología</h2>
+            <p>La mariposa monarca mide entre 9 y 11 cm de envergadura. Sus alas son de un vibrante color naranja con bordes negros y puntos blancos. Los machos presentan puntos negros en sus alas traseras.</p>
+            <img src="mariposa2.jpg" alt="Alas de mariposa monarca">
+        </div>
+
+        <div class="subseccion">
+            <h2>Ciclo de Vida y Reproducción</h2>
+            <p>La monarca pasa por una metamorfosis completa: huevo, larva (oruga), crisálida y adulto. El ciclo entero puede durar de 4 a 6 semanas, excepto la generación migratoria que vive hasta 8 meses.</p>
+            <img src="mariposa3.png" alt="Ciclo de vida de la mariposa monarca">
+        </div>
+
+        <div class="subseccion">
+            <h2>Hábitat y Distribución</h2>
+            <p>Se encuentra en América del Norte, desde Canadá hasta México. Prefiere campos abiertos, praderas, jardines y zonas con algodoncillo, donde se reproducen y se alimentan.</p>
+        </div>
+
+        <div class="subseccion">
+            <h2>Comportamiento y Migración</h2>
+            <p>Las monarcas migran más de 4,000 km para hibernar en bosques mexicanos. Utilizan señales solares y magnéticas para orientarse, una hazaña única en el reino animal.</p>
+            <img src="mariposa4.png" alt="Ruta de migración de la mariposa monarca">
+        </div>
+
+        <div class="subseccion">
+            <h2>Alimentación</h2>
+            <p>Las orugas comen algodoncillo, que les otorga una defensa química contra depredadores. Los adultos se alimentan de néctar de flores como zinnias, cosmos y girasoles.</p>
+        </div>
+
+        <div class="subseccion">
+            <h2>Amenazas</h2>
+            <ul>
+                <li><strong>Deforestación:</strong> reduce los bosques donde hibernan.</li>
+                <li><strong>Uso de pesticidas:</strong> elimina el algodoncillo.</li>
+                <li><strong>Cambio climático:</strong> altera rutas migratorias y tiempos reproductivos.</li>
+            </ul>
+        </div>
+
+        <div class="subseccion">
+            <h2>Conservación</h2>
+            <ul>
+                <li>Santuarios naturales como los de Michoacán (México).</li>
+                <li>Programas de protección del algodoncillo.</li>
+                <li>Educación ambiental y acuerdos trinacionales.</li>
+            </ul>
+        </div>
+
+        <div class="subseccion">
+            <h2>Simbología Cultural</h2>
+            <p>En el Día de Muertos en México, se cree que representan el regreso de las almas. También simbolizan transformación, resistencia y renovación espiritual.</p>
+        </div>
+
+        <div class="subseccion">
+            <h2>Curiosidades</h2>
+            <ul>
+                <li>Solo una generación realiza toda la migración.</li>
+                <li>Pueden volar más de 100 km en un día.</li>
+                <li>Algunas monarcas se orientan por el sol incluso en días nublados.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script>
+    function mostrarOcultar() {
+        const info = document.getElementById('infoCientifica');
+        info.classList.toggle('oculto');
+    }
+
+    function buscarSeccion() {
+        const texto = document.getElementById('busqueda').value.toLowerCase();
+        const secciones = document.querySelectorAll('.subseccion');
+        let algunaCoincide = false;
+
+        secciones.forEach(sec => {
+            const contenido = sec.innerText.toLowerCase();
+            if (contenido.includes(texto)) {
+                sec.style.display = 'block';
+                algunaCoincide = true;
+            } else {
+                sec.style.display = 'none';
+            }
+        });
+
+        document.getElementById('infoCientifica').classList.remove('oculto');
+
+        if (!algunaCoincide) {
+            alert("No se encontró ninguna sección con esa palabra.");
+        }
+    }
+
+    function mostrarTodo() {
+        const secciones = document.querySelectorAll('.subseccion');
+        secciones.forEach(sec => {
+            sec.style.display = 'block';
+        });
+        document.getElementById('infoCientifica').classList.remove('oculto');
+    }
+</script>
+
+</body>
+</html>
